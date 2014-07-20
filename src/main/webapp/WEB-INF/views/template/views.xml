@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE tiles-definitions PUBLIC '-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN' 'http://tiles.apache.org/dtds/tiles-config_2_1.dtd'>
+
+<tiles-definitions>
+    <definition name="publicTemplate" template="/WEB-INF/views/template/public/template.jsp">
+<!--        <put-attribute name="top" value="/WEB-INF/views/template/core.top.jsp" />
+        <put-attribute name="sidebar" value="/WEB-INF/views/template/core.sidebar.jsp" />-->
+    </definition>
+    
+    <definition name="*/*" extends="publicTemplate">
+        <put-attribute name="content" value="/WEB-INF/views/public/{1}/{2}.jsp" />
+    </definition>
+</tiles-definitions>
